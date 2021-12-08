@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react"
 
 
 export const useForm = ( initialState = {} ) => {
@@ -9,16 +9,16 @@ export const useForm = ( initialState = {} ) => {
         setValues( initialState );
     }
 
+
     const handleInputChange = ({ target }) => {
+
         setValues({
             ...values,
             [ target.name ]: target.value
         });
 
-        // console.log(values)
-    };
+    }
+
     return [ values, handleInputChange, reset ];
 
-
-
-};
+}
